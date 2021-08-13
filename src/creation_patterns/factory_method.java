@@ -1,3 +1,4 @@
+//   DO NOT combine separate interfaces and classes in the same file! create separate files
 package creation_patterns;
 
 public class factory_method {
@@ -14,24 +15,24 @@ class runOld {
     }
 }
 // with
-interface common_interface {
+interface commonInt {
     //    create a common interface for all functions to call upon, trying to be as encompassing as possible
     void print_int();
 }
-// or
-abstract class common_abstract {
+// or create a common abstract class if you want universal logic in functions
+abstract class commonAbstract {
     public void print_abs() {
         System.out.println("New object creation");
     };
 }
 
-class runNewInt implements common_interface{
+class runNewInt implements commonInt{
     public void print_int() {
         System.out.println("New object creation");
     }
 }
 
-class runNewAbs extends common_abstract {
+class runNewAbs extends commonAbstract {
 //    prints out New object creation
     public void print_abs() {}
 }

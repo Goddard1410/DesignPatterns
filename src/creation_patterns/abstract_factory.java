@@ -1,3 +1,4 @@
+//   DO NOT combine separate interfaces and classes in the same file! create separate files
 package creation_patterns;
 
 interface one {

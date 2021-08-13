@@ -1,3 +1,4 @@
+//   DO NOT combine separate interfaces and classes in the same file! create separate files
 package creation_patterns;
 
 import java.util.ArrayList;
@@ -61,6 +62,7 @@ public class prototype {
 //    objects supporting this copying or "cloning" are prototypes
 //    can be used when combined with factories to create many prototypes quickly
     public void run() {
+//        create array lists to keep track of originals and copies if needed
         List<commonAbs> regulars = new ArrayList<>();
         List<commonAbs> clones = new ArrayList<>();
 

@@ -1,3 +1,4 @@
+//   DO NOT combine separate interfaces and classes in the same file! create separate files
 package creation_patterns;
 
 enum objType {
@@ -12,7 +13,7 @@ class clsType {
     }
 }
 
-class Product1 {
+class product1 {
 //    One object to be created with the builders
     private final boolean bool;
     private final int num;
@@ -21,7 +22,7 @@ class Product1 {
     private final objType type;
     private final clsType cls;
 
-    public Product1(boolean bool, int num, double doub, String str, objType type, clsType cls) {
+    public product1(boolean bool, int num, double doub, String str, objType type, clsType cls) {
         this.bool = bool;
         this.num = num;
         this.doub = doub;
@@ -43,7 +44,7 @@ class Product1 {
     }
 }
 
-class Product2 {
+class product2 {
     //    Second object to be created with the builders
     private final boolean bool;
     private final int num;
@@ -53,7 +54,7 @@ class Product2 {
     private final clsType cls;
 
 
-    public Product2(boolean bool, int num, double doub, String str, objType type, clsType cls) {
+    public product2(boolean bool, int num, double doub, String str, objType type, clsType cls) {
         this.bool = bool;
         this.num = num;
         this.doub = doub;
@@ -119,8 +120,8 @@ class builder1 implements build {
         this.cls = cls;
     }
 //     returns new object variation
-    public Product1 result() {
-        return new Product1(bool, num, doub, str, type, cls);
+    public product1 result() {
+        return new product1(bool, num, doub, str, type, cls);
     }
 }
 
@@ -156,8 +157,8 @@ class builder2 implements build {
     public void setComp6(clsType cls) {
         this.cls = cls;
     }
-    public Product2 result() {
-        return new Product2(bool, num, doub, str, type, cls);
+    public product2 result() {
+        return new product2(bool, num, doub, str, type, cls);
     }
 
 }
@@ -195,20 +196,20 @@ public class builder {
 
 //      calls construct function, activating builders and creating object as product 1 (p1)
         dir.constructVar1(b1);
-        Product1 p1 = b1.result();
+        product1 p1 = b1.result();
         System.out.println(p1.post());
 //      different creation_patterns.builder's take on the same data from variation 1
         dir.constructVar1(b2);
-        Product2 p2 = b2.result();
+        product2 p2 = b2.result();
         System.out.println(p2.post());
 
         //      calls construct function, activating builders and creating object as product 1 (p1)
         dir.constructVar2(b1);
-        Product1 p1b = b1.result();
+        product1 p1b = b1.result();
         System.out.println(p1b.post());
 //      different creation_patterns.builder's take on the same data from variation 2
         dir.constructVar2(b2);
-        Product2 p2b = b2.result();
+        product2 p2b = b2.result();
         System.out.println(p2b.post());
     }
 }
