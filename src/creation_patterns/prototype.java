@@ -69,7 +69,7 @@ public class prototype {
         v1.num = 254;
         regulars.add(v1);
 //        Create clone of prototype
-        var1 v1clone = (var1) v1.clone();
+        var1 v1clone = v1.clone();
         clones.add(v1clone);
 
 //        Create a different object to act as the prototype
@@ -77,7 +77,7 @@ public class prototype {
         v2.num = 254;
         regulars.add(v2);
 //        Create clone of prototype
-        var2 v2clone = (var2) v2.clone();
+        var2 v2clone = v2.clone();
         clones.add(v2clone);
 
         System.out.println("Regulars: " + regulars);
