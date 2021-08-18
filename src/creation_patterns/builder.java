@@ -198,7 +198,7 @@ public class builder {
         dir.constructVar1(b1);
         product1 p1 = b1.result();
         System.out.println(p1.post());
-//      different creation_patterns.builder's take on the same data from variation 1
+//      different builder's take on the same data from variation 1
         dir.constructVar1(b2);
         product2 p2 = b2.result();
         System.out.println(p2.post());
@@ -207,7 +207,7 @@ public class builder {
         dir.constructVar2(b1);
         product1 p1b = b1.result();
         System.out.println(p1b.post());
-//      different creation_patterns.builder's take on the same data from variation 2
+//      different builder's take on the same data from variation 2
         dir.constructVar2(b2);
         product2 p2b = b2.result();
         System.out.println(p2b.post());
