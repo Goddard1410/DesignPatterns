@@ -1,6 +1,7 @@
 //   DO NOT combine separate interfaces and classes in the same file! create separate files
 package structure_patterns;
 // adds a bunch of objects with methods, not all of which are needed when interacting
+// the classes up to the facade can be pretty much anything that you want, the main thing is that the large number of classes and methods are condensed down to f.convertText()
 class backEnd1 {
     private String name;
     private String type;
@@ -16,6 +17,8 @@ class backEnd1 {
         return type;
     }
 }
+
+// interfaces can be added to library
 interface backEndInt {
     String getType();
 }
@@ -59,6 +62,7 @@ public class facade {
 
 class execute  {
     public void run() {
+//        instantiates the facade and its 1 method, condensing all the backEnd objects, the interface, and the factory
         facade f = new facade();
         String convertedName = f.convertText("Kraken");
         System.out.println(convertedName);
