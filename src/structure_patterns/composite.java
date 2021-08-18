@@ -215,6 +215,7 @@ class compoundObj extends baseObject {
 //creates a class which takes all the objects in the "tree" and executes them
 class client {
     private executor ex;
+//    compoundObj contains the other "branches" inside it as the children list, meaning that we don't have to call objs 1 or 2
     private compoundObj compObj = new compoundObj();
 
     public client() {
@@ -255,7 +256,7 @@ public class composite {
                         new obj1(1410, false),
                         new obj2(1410, true)
                 ),
-                
+
                 new compoundObj(
                         new obj2(118, true),
                         new obj2(254, true),
