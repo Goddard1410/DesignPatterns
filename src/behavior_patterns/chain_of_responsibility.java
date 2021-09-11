@@ -1,10 +1,6 @@
 //   DO NOT combine separate interfaces and classes in the same file! create separate files
 package behavior_patterns;
 
-import java.io.BufferedReader;
-import java.io.IOError;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Objects;
 import java.util.HashMap;
 
@@ -31,8 +27,8 @@ abstract class handler {
 }
 
 class handler1 extends handler {
-    private int checkSum1;
-    private int checkSum2;
+    private final int checkSum1;
+    private final int checkSum2;
 
     public handler1(int checkSum1, int checkSum2) {
 //        objects can also be passed through for external functions
