@@ -29,7 +29,7 @@ class command1 extends commandInterface {
             return false;
         }
 //        in this case, the command converts the string to upper case
-        receive.string1.toUpperCase();
+        receive.string1 = receive.string1.toUpperCase();
         return true;
     }
 }
